@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThoughtDef Name="PoS_TramplingMemoryBase" Abstract="True">
+    <thoughtClass>Thought_AttendedRitual</thoughtClass>
+    <durationDays>4</durationDays>
+    <stackLimit>3</stackLimit>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="PoS_TramplingMemoryBase">
+    <defName>PoS_Trampling_Hollow</defName>
+    <stages>
+      <li>
+        <label>hollow trampling</label>
+        <description>The trampling ritual was hollow, but at least it was done.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="PoS_TramplingMemoryBase">
+    <defName>PoS_Trampling_Solemn</defName>
+    <stages>
+      <li>
+        <label>solemn trampling</label>
+        <description>The trampling ritual was solemn and I felt part of something.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="PoS_TramplingMemoryBase">
+    <defName>PoS_Trampling_Fervent</defName>
+    <stages>
+      <li>
+        <label>fervent trampling</label>
+        <description>The trampling ritual was fervent. We moved as one.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="PoS_TramplingMemoryBase">
+    <defName>PoS_Trampling_Transcendent</defName>
+    <stages>
+      <li>
+        <label>transcendent trampling</label>
+        <description>The trampling ritual was transcendent. I have never felt so certain.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- The actual mood comes from the per-instance moodOffset the outcome worker sets from the victim's starting health. -->
+  <ThoughtDef>
+    <defName>PoS_Trampling_HealthyVictim</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>4</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>healthy victim</label>
+        <description>The victim was in good health when the ritual began, which made the sacrifice feel greater.</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

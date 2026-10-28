@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RitualPatternDef>
+    <defName>PoS_Trampling</defName>
+    <alwaysStartAnytime>true</alwaysStartAnytime>
+    <ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
+    <ritualObligationTargetFilter>PoS_TramplingAltar</ritualObligationTargetFilter>
+    <ritualBehavior>PoS_Trampling</ritualBehavior>
+    <ritualOutcomeEffect>PoS_Trampling</ritualOutcomeEffect>
+    <tags>
+      <li>PoS_Trampling</li>
+    </tags>
+  </RitualPatternDef>
+
+</Defs>

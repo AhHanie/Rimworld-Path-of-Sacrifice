@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RitualOutcomeEffectDef>
+    <defName>PoS_Trampling</defName>
+    <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days. A victim who was healthier when the ritual began adds a further +1 (from 50% health) or +3 (from 80% health). The victim receives a permanent scar.</description>
+    <workerClass>Path_of_Sacrifice.RitualOutcomeEffectWorker_Trampling</workerClass>
+    <startingQuality>0.15</startingQuality>
+    <allowAttachableOutcome>false</allowAttachableOutcome>
+    <comps>
+      <li Class="RitualOutcomeComp_ParticipantCount">
+        <label>participant count</label>
+        <curve>
+          <points>
+            <li>(2, 0.05)</li>
+            <li>(4, 0.15)</li>
+            <li>(6, 0.25)</li>
+          </points>
+        </curve>
+      </li>
+      <li Class="Path_of_Sacrifice.RitualOutcomeComp_CompletedCrossings">
+        <label>percent of planned crossings completed</label>
+        <curve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(100, 0.45)</li>
+          </points>
+        </curve>
+      </li>
+    </comps>
+    <outcomeChances>
+      <li>
+        <label>Hollow</label>
+        <chance>0.25</chance>
+        <memory>PoS_Trampling_Hollow</memory>
+        <positivityIndex>0</positivityIndex>
+        <roleIdsNotGainingMemory><li>victim</li></roleIdsNotGainingMemory>
+        <description>The {0} was hollow. The procession stumbled along and few felt anything.</description>
+      </li>
+      <li>
+        <label>Solemn</label>
+        <chance>0.25</chance>
+        <memory>PoS_Trampling_Solemn</memory>
+        <positivityIndex>1</positivityIndex>
+        <roleIdsNotGainingMemory><li>victim</li></roleIdsNotGainingMemory>
+        <description>The {0} was solemn. Each step across the victim felt like a pledge.</description>
+      </li>
+      <li>
+        <label>Fervent</label>
+        <chance>0.25</chance>
+        <memory>PoS_Trampling_Fervent</memory>
+        <positivityIndex>2</positivityIndex>
+        <roleIdsNotGainingMemory><li>victim</li></roleIdsNotGainingMemory>
+        <description>The {0} was fervent. The procession moved as one and the mark was well earned.</description>
+      </li>
+      <li>
+        <label>Transcendent</label>
+        <chance>0.25</chance>
+        <memory>PoS_Trampling_Transcendent</memory>
+        <positivityIndex>3</positivityIndex>
+        <roleIdsNotGainingMemory><li>victim</li></roleIdsNotGainingMemory>
+        <description>The {0} was transcendent. Everyone felt the weight of the sacrifice and left lighter for it.</description>
+      </li>
+    </outcomeChances>
+  </RitualOutcomeEffectDef>
+
+</Defs>

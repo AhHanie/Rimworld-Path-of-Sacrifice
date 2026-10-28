@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RitualObligationTargetFilterDef>
+    <defName>PoS_TramplingAltar</defName>
+    <workerClass>Path_of_Sacrifice.RitualObligationTargetWorker_TramplingAltar</workerClass>
+  </RitualObligationTargetFilterDef>
+
+</Defs>

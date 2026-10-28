@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RitualBehaviorDef>
+    <defName>PoS_Trampling</defName>
+    <workerClass>Path_of_Sacrifice.RitualBehaviorWorker_Trampling</workerClass>
+    <durationTicks>1200</durationTicks>
+    <spectatorsLabel>Tramplers</spectatorsLabel>
+    <spectatorGerund>trample</spectatorGerund>
+    <spectatorFilter Class="Path_of_Sacrifice.RitualSpectatorFilter_Tramplers">
+      <description>Tramplers must be free, able-bodied adult colonists.</description>
+    </spectatorFilter>
+    <roles>
+      <li Class="Path_of_Sacrifice.RitualRoleTramplingVictim">
+        <label>victim</label>
+        <id>victim</id>
+        <maxCount>1</maxCount>
+        <required>True</required>
+        <missingDesc>a victim to lie in front of the altar</missingDesc>
+        <countsAsParticipant>False</countsAsParticipant>
+        <ignoreBleeding>true</ignoreBleeding>
+        <allowDowned>true</allowDowned>
+        <allowChild>false</allowChild>
+        <endJobOnRitualCleanup>true</endJobOnRitualCleanup>
+      </li>
+    </roles>
+    <stages>
+      <!-- Everyone moves into place. Ends when the victim lies on the cell and every trampler is at their waiting cell. -->
+      <li>
+        <defaultDuty>PoS_Trampler</defaultDuty>
+        <showProgressBar>false</showProgressBar>
+        <endTriggers>
+          <li Class="Path_of_Sacrifice.StageEndTrigger_TramplingAssembled" />
+        </endTriggers>
+        <roleBehaviors>
+          <li>
+            <roleId>victim</roleId>
+            <dutyDef>PoS_TramplingVictim</dutyDef>
+          </li>
+        </roleBehaviors>
+      </li>
+      <!-- The crossing. Ends when every circuit is walked, or when it is no longer safe to continue. -->
+      <li>
+        <defaultDuty>PoS_Trampler</defaultDuty>
+        <essential>True</essential>
+        <spectatorsRequired>True</spectatorsRequired>
+        <showProgressBar>false</showProgressBar>
+        <endTriggers>
+          <li Class="Path_of_Sacrifice.StageEndTrigger_TramplingComplete" />
+        </endTriggers>
+        <roleBehaviors>
+          <li>
+            <roleId>victim</roleId>
+            <dutyDef>PoS_TramplingVictim</dutyDef>
+          </li>
+        </roleBehaviors>
+      </li>
+      <!-- Short closing stage so the essential stage is marked finished before the outcome is applied. -->
+      <li>
+        <defaultDuty>PoS_Trampler</defaultDuty>
+        <endTriggers>
+          <li Class="StageEndTrigger_DurationPercentage">
+            <percentage>0.25</percentage>
+          </li>
+        </endTriggers>
+        <roleBehaviors>
+          <li>
+            <roleId>victim</roleId>
+            <dutyDef>PoS_TramplingVictim</dutyDef>
+          </li>
+        </roleBehaviors>
+      </li>
+    </stages>
+  </RitualBehaviorDef>
+
+</Defs>

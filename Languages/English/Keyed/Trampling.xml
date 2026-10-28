@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <PoS_Trampling_NoLane>There is no clear lane in front of this altar for the procession. It needs open floor in front of it, wide enough to cross and loop back.</PoS_Trampling_NoLane>
+    <PoS_Trampling_NoQueueSpace>There is not enough open floor beside the altar for {0} tramplers to wait their turn.</PoS_Trampling_NoQueueSpace>
+    <PoS_Trampling_NeedWalkers>The trampling ritual needs at least {0} tramplers.</PoS_Trampling_NeedWalkers>
+    <PoS_Trampling_TooManyWalkers>The trampling ritual allows at most {0} tramplers.</PoS_Trampling_TooManyWalkers>
+    <PoS_Trampling_NoEscort>{0} cannot be carried to the altar: none of the tramplers can reach them.</PoS_Trampling_NoEscort>
+    <PoS_Trampling_VictimUnreachable>{0} cannot reach the altar.</PoS_Trampling_VictimUnreachable>
+    <PoS_Trampling_VictimIsWalker>The victim cannot also be a trampler.</PoS_Trampling_VictimIsWalker>
+
+    <PoS_Trampling_VictimMustBeHumanlike>{0} must be a person.</PoS_Trampling_VictimMustBeHumanlike>
+    <PoS_Trampling_VictimMustBeAdult>{0} must be an adult.</PoS_Trampling_VictimMustBeAdult>
+    <PoS_Trampling_VictimMustBeControlled>{0} must be a colonist, prisoner or slave of the colony.</PoS_Trampling_VictimMustBeControlled>
+    <PoS_Trampling_VictimMustBeAvailable>{0} must be spawned, awake and able to walk to the altar.</PoS_Trampling_VictimMustBeAvailable>
+    <PoS_Trampling_VictimMustNotBeDowned>{0} must not already be downed.</PoS_Trampling_VictimMustNotBeDowned>
+
+    <PoS_Trampling_CalledOff_Layout>The altar surroundings changed and the procession no longer fits.</PoS_Trampling_CalledOff_Layout>
+    <PoS_Trampling_CalledOff_Assembly>The procession could not gather in time.</PoS_Trampling_CalledOff_Assembly>
+    <PoS_Trampling_CalledOff_TooFewWalkers>Too few tramplers remain to continue.</PoS_Trampling_CalledOff_TooFewWalkers>
+    <PoS_Trampling_CalledOff_NoScar>No part of {PAWN_labelShort} could safely be scarred.</PoS_Trampling_CalledOff_NoScar>
+    <PoS_Trampling_CalledOff_NoEscort>No one is left who can carry {PAWN_labelShort} to the altar.</PoS_Trampling_CalledOff_NoEscort>
+    <PoS_Trampling_CalledOff_VictimLost>The victim is gone.</PoS_Trampling_CalledOff_VictimLost>
+    <PoS_Trampling_CalledOff_NoOutcome>The ritual ended before the victim was marked.</PoS_Trampling_CalledOff_NoOutcome>
+
+    <PoS_Trampling_WalkerDropped>{PAWN_labelShort} can no longer take part in the procession.</PoS_Trampling_WalkerDropped>
+    <PoS_Trampling_StoppedEarly>The procession stops early: no further part of {PAWN_labelShort} can safely take another step.</PoS_Trampling_StoppedEarly>
+
+    <PoS_Trampling_QualityHealth>Victim's starting health ({0}): mood {1} for the participants</PoS_Trampling_QualityHealth>
+    <PoS_Trampling_QualityHealthNone>Victim's starting health ({0}): no extra mood (needs 50% or more)</PoS_Trampling_QualityHealthNone>
+    <PoS_Trampling_QualityEarlyStop>The procession stopped before every planned crossing was walked, which lowered the quality</PoS_Trampling_QualityEarlyStop>
+    <PoS_Trampling_QualityDropped>{0} tramplers dropped out, which lowered the quality</PoS_Trampling_QualityDropped>
+</LanguageData>

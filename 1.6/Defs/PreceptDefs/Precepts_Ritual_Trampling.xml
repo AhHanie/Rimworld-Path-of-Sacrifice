@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PreceptDef>
+    <defName>PoS_Trampling</defName>
+    <label>trampling</label>
+    <description>A victim lies in front of the altar while the participants file past and step across them, one at a time, in two circuits. Each crossing leaves a small bruise, and the victim is permanently marked with a single ritual scar. The victim survives. The healthier the victim was when the ritual began, the more the participants will enjoy it.</description>
+    <issue>Ritual</issue>
+    <impact>Medium</impact>
+    <iconPath>UI/Icons/Rituals/RitualScarification</iconPath>
+    <preceptClass>Precept_Ritual</preceptClass>
+    <ritualPatternBase>PoS_Trampling</ritualPatternBase>
+    <visible>true</visible>
+    <countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+    <selectionWeight>0</selectionWeight>
+    <displayOrderInImpact>110</displayOrderInImpact>
+    <receivesExpectationsQualityOffset>true</receivesExpectationsQualityOffset>
+    <canGenerateAsSpecialPrecept>false</canGenerateAsSpecialPrecept>
+    <notifyPlayerOnOpportunity>false</notifyPlayerOnOpportunity>
+    <useRepeatPenalty>true</useRepeatPenalty>
+    <capitalizeAsTitle>false</capitalizeAsTitle>
+  </PreceptDef>
+
+</Defs>
